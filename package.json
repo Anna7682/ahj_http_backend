@@ -1,32 +1,27 @@
 {
-  "name": "ahj-http-backend",
+  "name": "ahj-http_backend",
   "version": "1.0.0",
-  "description": "Service http BackEnd",
-  "main": "index.js",
+  "description": "HelpDesk",
+  "main": "server.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "node index.js",
-    "dev": "nodemon index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "forever server.js",
+    "watch": "forever -w server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Anna7682/ahj-http.git"
-  },
-  "author": "Anna",
-  "license": "MIT",
-  "engines": {
-    "node": "14.x"
-  },
+  
+  "author": "coursar",
+  "license": "ISC",
+  
   "dependencies": {
-    "@koa/cors": "^3.1.0",
+    "forever": "^3.0.4",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
-    "faker": "^5.5.3",
-    "koa-router": "^10.0.0",
-    "koa-slow": "^2.1.0"
+    "koa-static": "^5.0.0",
+    "koa-cors": "0.0.16",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
+  "engines": {
+    "node": "11.x"
   }
 }
